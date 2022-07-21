@@ -82,13 +82,13 @@ class MitsubishiCarDirector
     }
 }
 
-//response with director
+/**** response with director ****/
 //$mitsubishiDirector = new MitsubishiCarDirector();
 //$mitsubishiDirector = $director->build(new CarBuilder());
 //var_dump($mitsubishiDirector);
 
 
-//response normally
+/**** response normally ****/
 $saipaCar = (new CarBuilder())
     ->setBrand('saipa')
     ->setCapacity(4)
