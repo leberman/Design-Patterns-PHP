@@ -38,10 +38,6 @@ class CarBuilder implements CarBuilderInterface
         return $this;
     }
 
-    protected function getBrand(): string
-    {
-        return $this->car->brand;
-    }
 
     public function setCapacity(int $int): static
     {
@@ -49,20 +45,11 @@ class CarBuilder implements CarBuilderInterface
         return $this;
     }
 
-    protected function getCapacity(): int
-    {
-        return $this->car->capacity;
-    }
 
     public function setColor(string $string): static
     {
         $this->car->color = $string;
         return $this;
-    }
-
-    protected function getColor(): string
-    {
-        return $this->car->color;
     }
 
     public function build(): Car
