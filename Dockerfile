@@ -3,8 +3,9 @@ FROM php:8.0.13-fpm-alpine
 #COPY ./src/composer.lock ./src/composer.json /var/www/html/
 
 WORKDIR /var/www/html
+COPY ./apache/apache2.conf /etc/apache2
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-#RUN docker-php-ext-install mysqli pdo pdo_mysql zip exif pcntl
 #RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 #RUN docker-php-ext-install gd
 #
